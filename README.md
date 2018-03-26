@@ -1,0 +1,6 @@
+# RiemannCamera
+Android中滤镜使用OpenGL和RenderScript处理图片
+1.OPENGL滤镜
+2.RenderScript处理摄像头图片
+3.滤镜算法再顶点着色器和片段着色器中
+4.RS脚本算法再renderscript文件夹下
