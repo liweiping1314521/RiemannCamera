@@ -1,0 +1,19 @@
+precision mediump float;
+uniform sampler2D sTexture;
+
+varying vec2 texCoord;
+
+void main() {
+    vec3 baseColor = texture2D(sTexture, texCoord).rgb;
+
+    float newR = 0.393 * baseColor.r + 0.769 * baseColor.g + 0.189 * baseColor.b;
+    float newG = 0.349 * baseColor.r + 0.686 * baseColor.g + 0.168 * baseColor.b;
+    float newB = 0.272 * baseColor.r + 0.534 * baseColor.g + 0.131 * baseColor.b;
+
+    newB = ( newB > 1.0 ? 1.0 : (newB < 0.0 ? 0.0 : newB));
+    newG = ( newG > 1.0 ? 1.0 : (newG < 0.0 ? 0.0 : newG));
+    newR = ( newR > 1.0 ? 1.0 : (newR < 0.0 ? 0.0 : newR));
+
+    gl_FragColor = vec4(newR, newG, newB, 1.0);
+}
+

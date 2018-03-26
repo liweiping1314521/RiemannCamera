@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1" >
+
+    <com.riemann.camera.ui.PreviewFrameLayout
+        android:id="@+id/preview_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.riemann.camera.android.CameraGLSurfaceView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/gl_surface_view" />
+        <ImageView
+            android:id="@+id/image_view1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+   </com.riemann.camera.ui.PreviewFrameLayout>
+
+</RelativeLayout>

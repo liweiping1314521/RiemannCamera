@@ -1,0 +1,13 @@
+precision mediump float;
+uniform sampler2D sTexture;
+
+varying vec2 texCoord;
+
+void main() {
+    vec3 baseColor = texture2D(sTexture, texCoord).rgb;
+
+    float gay = dot(baseColor.rgb, vec3(0.299, 0.587, 0.114));
+
+    gl_FragColor = vec4(gay, gay, gay, 1.0);
+}
+

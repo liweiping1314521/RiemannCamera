@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<filters>
+
+    <filter
+        id="0"
+        name="原色"
+        color="#4d5457" />
+
+    <filter
+        id="1"
+        name="灰色"
+        color="#0f9dae" />
+
+    <filter
+        id="2"
+        name="彩虹渐变"
+        color="#6fcbe2" />
+    
+    <filter
+        id="3"
+        name="泛黄渐变"
+        color="#5c91a7" />
+
+    <filter
+        id="4"
+        name="粉蓝渐变"
+        color="#c6ab77" />
+
+    <filter
+        id="5"
+        name="光束渐变"
+        color="#b59658" />
+
+    <filter
+        id="6"
+        name="黄色渐变"
+        color="#191919" />
+
+    <filter
+        id="7"
+        name="冷色渐变"
+        color="#de8181" />
+
+    <filter
+        id="8"
+        name="四色渐变"
+        color="#e79999" />
+
+    <filter
+        id="9"
+        name="复古渐变"
+        color="#9c6293" />
+
+    <filter
+        id="10"
+        name="Lomo"
+        color="#886583" />
+
+    <filter
+        id="11"
+        name="Lomo黄"
+        color="#1f826a" />
+
+	<filter
+        id="12"
+        name="拼图"
+        color="#b59658" /> 
+	<filter
+        id="13"
+        name="大理石纸"
+        color="#6d6d6d" /> 
+
+	<filter
+        id="14"
+        name="怀旧"
+        color="#9c6293" /> 	
+	<filter
+        id="15"
+        name="浮雕"
+        color="#6d6d6d" />
+    
+     <filter
+        id="16"
+        name="冷红"
+        color="#0f9dae" />
+
+    <filter
+        id="17"
+        name="冷蓝"
+        color="#6fcbe2" />
+    
+    <filter
+        id="18"
+        name="冷绿"
+        color="#5c91a7" />
+
+    <filter
+        id="19"
+        name="冷紫"
+        color="#c6ab77" />
+
+    <filter
+        id="20"
+        name="暖黄"
+        color="#b59658" />
+
+    <filter
+        id="21"
+        name="Ansel"
+        color="#0f9dae" />
+
+    <filter
+        id="22"
+        name="Sepia"
+        color="#6fcbe2" />
+
+    <filter
+        id="23"
+        name="Retro"
+        color="#5c91a7" />
+
+    <filter
+        id="24"
+        name="Georgia"
+        color="#c6ab77" />
+
+    <filter
+        id="25"
+        name="Sahara"
+        color="#6d6d6d" />
+
+    <filter
+        id="26"
+        name="Polaroid"
+        color="#b59658" />
+
+</filters>

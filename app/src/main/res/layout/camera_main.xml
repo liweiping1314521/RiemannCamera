@@ -1,0 +1,151 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/camera_top_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="60.0dip"
+            android:background="#ff252525" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true" >
+
+                <com.riemann.camera.ui.RotateImageView
+                    android:id="@+id/btn_go_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:src="@drawable/btn_camera_home" />
+
+                <com.riemann.camera.ui.RotateImageView
+                    android:id="@+id/btn_flashlight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/btn_camera_flash_off" />
+
+                <com.riemann.camera.ui.RotateImageView
+                    android:id="@+id/btn_camera_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10.0dip"
+                    android:src="@drawable/btn_camera_switch" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_toLeftOf="@id/btn_camera_switch"
+                    android:layout_toRightOf="@id/btn_flashlight" >
+
+                    <com.riemann.camera.ui.RotateImageView
+                        android:id="@+id/btn_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/btn_camera_line_off" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <include layout="@layout/preview_layout"/>
+
+        <RelativeLayout
+            android:id="@+id/camera_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="100.0dip"
+            android:background="#ff252525" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="100.0dip"
+                android:layout_alignParentBottom="true"
+                android:padding="10.0dip" >
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8.0dip" >
+
+                    <com.riemann.camera.ui.RotateImageView
+                        android:id="@+id/btn_thumbal"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:background="@drawable/btn_camera_album_bg"
+                        android:padding="1.0dip"
+                        android:scaleType="centerCrop" />
+
+                    <ProgressBar
+                        android:id="@+id/pb_take_photo"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:background="@android:color/black"
+                        android:indeterminateDrawable="@drawable/progress_bar"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <com.riemann.camera.ui.ShutterButton
+                    android:id="@+id/btn_takephoto"
+                    android:layout_width="80.0dip"
+                    android:layout_height="80.0dip"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/btn_take_photo"
+                    android:clickable="true" />
+
+                <CheckBox
+                    android:id="@+id/cb_square_camera"
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8.0dip"
+                    android:background="@drawable/checkbox_camera_square"
+                    android:button="@null"
+                    android:checked="false" />
+
+                <TextView
+                    android:id="@+id/tv_camera_ratio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/cb_square_camera"
+                    android:layout_alignRight="@id/cb_square_camera"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="滤镜"
+                    android:textColor="@color/white"
+                    android:textSize="10.0dip" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_hlist_view"
+        android:layout_width="fill_parent"
+        android:layout_height="100.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100.0dip"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/filter_view"
+            android:layout_width="fill_parent"
+            android:layout_height="100.0dip"
+            android:background="@android:color/transparent"
+            android:scrollbars="none" />
+    </RelativeLayout>
+    
+</RelativeLayout>

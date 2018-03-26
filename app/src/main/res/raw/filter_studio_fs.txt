@@ -1,0 +1,47 @@
+precision mediump float;
+uniform sampler2D sTexture;
+
+uniform float r_color;
+uniform float g_color;
+uniform float b_color;
+
+varying vec2 texCoord;
+
+float BlendScreen(float baseColor, float blendColor) {
+     return 1.0 - ((1.0 - baseColor) * (1.0 - blendColor));
+ }
+
+ float BlendOverLay(float baseColor, float blendColor) {
+     if(baseColor < 0.5) {
+         return 2.0 * baseColor * blendColor;
+     }
+     else {
+         return 1.0 - ( 2.0 * ( 1.0 - baseColor) * ( 1.0 - blendColor));
+     }
+ }
+
+void main() {
+    vec3 baseColor = texture2D(sTexture, texCoord).rgb;
+
+    float temp = 0.392 * baseColor.r + 0.608 * BlendScreen(baseColor.r, baseColor.r);
+    float r = 0.176 * temp + 0.824 * BlendOverLay(temp, r_color);
+
+    temp = 0.392 * baseColor.g + 0.608 * BlendScreen(baseColor.g, baseColor.g);
+    float g = 0.176 * temp + 0.824 * BlendOverLay(temp, g_color);
+
+    temp = 0.392 * baseColor.b + 0.608 * BlendScreen(baseColor.b, baseColor.b);
+    float b = 0.176 * temp + 0.824 * BlendOverLay(temp, b_color);
+
+    gl_FragColor = vec4(r, g, b, 1.0);
+}
+
+
+
+
+
+
+
+
+
+
+

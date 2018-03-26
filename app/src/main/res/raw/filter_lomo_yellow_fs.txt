@@ -1,0 +1,22 @@
+precision mediump float;
+uniform sampler2D sTexture1;
+uniform sampler2D sTexture2;
+varying vec2 texCoord;
+
+float BlendMultiply(float baseColor, float blendColor) {
+    return baseColor * blendColor;
+}
+
+void main() {
+    vec3 baseColor = texture2D(sTexture1, texCoord).rgb;
+    vec3 color = texture2D(sTexture2, texCoord).rgb;
+    float r = BlendMultiply(baseColor.r, color.r);
+    float g = BlendMultiply(baseColor.g, color.g);
+    float b;
+    if(baseColor.b < 0.2) {
+        b = 0.0;
+    } else {
+        b = BlendMultiply(baseColor.b - 0.2, color.b);
+    }
+    gl_FragColor = vec4(r , g, b, 1.0);
+}
